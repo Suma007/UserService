@@ -8,7 +8,7 @@
         /// <summary>
         /// The id of the user
         /// </summary>
-        public int Id { get; set; }
+        public string Id { get; set; } = string.Empty;
         /// <summary>
         /// The name of the user
         /// </summary>
@@ -20,7 +20,7 @@
         /// <summary>
         /// The role of the user
         /// </summary>
-        public string Role { get; set; } = string.Empty;
+        public UserRole Role { get; set; } 
         /// <summary>
         /// The username of the user
         /// </summary>
