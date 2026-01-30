@@ -24,7 +24,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\UserService\UserService.WebApi.csproj" />
+    <ProjectReference Include="..\UserService.Presentation.Services\UserService.WebApi.csproj" />
   </ItemGroup>
 
   <ItemGroup>
