@@ -15,8 +15,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentatio
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Unit Tests", "Unit Tests", "{6CA848E3-81E4-4F34-ACB7-C96492FA6247}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Integration Tests", "Integration Tests", "{21EFB162-5E2F-4E3F-88D0-889591508CF4}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserService.Domain.Models", "UserService.Domain.Models\UserService.Domain.Models.csproj", "{CD3176A9-CEB3-4B51-AEDB-A74A83887161}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserService.Infrastructure.Services", "UserService.Infrastructure.Services\UserService.Infrastructure.Services.csproj", "{BBE7EDE7-3DDC-4C2F-9B90-A60BE06E8415}"
@@ -30,6 +28,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserService.Application.Services.Tests", "UserService.Application.Services.Tests\UserService.Application.Services.Tests.csproj", "{AEBE673C-8DD2-49E9-BABE-9171C7A0565B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserService.Infrastructure.Services.Tests", "UserServices.Infrastructure.Tests\UserService.Infrastructure.Services.Tests.csproj", "{E74D0365-8733-4750-B729-EFB459D456BF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserService.Application.Models.Tests", "UserService.Application.Models.Tests\UserService.Application.Models.Tests.csproj", "{8D1951CC-9BAE-4000-89B6-A166338CA7BC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -69,6 +69,10 @@ Global
 		{E74D0365-8733-4750-B729-EFB459D456BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E74D0365-8733-4750-B729-EFB459D456BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E74D0365-8733-4750-B729-EFB459D456BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D1951CC-9BAE-4000-89B6-A166338CA7BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D1951CC-9BAE-4000-89B6-A166338CA7BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D1951CC-9BAE-4000-89B6-A166338CA7BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D1951CC-9BAE-4000-89B6-A166338CA7BC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -82,6 +86,7 @@ Global
 		{C8BF3EF8-EEBD-4F51-8357-CAB37B9101DA} = {6CA848E3-81E4-4F34-ACB7-C96492FA6247}
 		{AEBE673C-8DD2-49E9-BABE-9171C7A0565B} = {6CA848E3-81E4-4F34-ACB7-C96492FA6247}
 		{E74D0365-8733-4750-B729-EFB459D456BF} = {6CA848E3-81E4-4F34-ACB7-C96492FA6247}
+		{8D1951CC-9BAE-4000-89B6-A166338CA7BC} = {6CA848E3-81E4-4F34-ACB7-C96492FA6247}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {650F263A-42D2-4BC8-8362-EEE3A55F5273}

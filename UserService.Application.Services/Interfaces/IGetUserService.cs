@@ -12,6 +12,6 @@ namespace UserService.Application.Services.Interfaces
         /// </summary>
         /// <param name="userId"></param>
         /// <returns></returns>
-        Task<UserDto?> GetUserAsync(string userId);
+        Task<UserDto> GetUserAsync(string userId);
     }
 }

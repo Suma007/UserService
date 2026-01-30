@@ -24,10 +24,10 @@ namespace UserService.Application.Services.CreateUser
             if (UserRequestValidator.ValidateCreate(createUserRequest))
             {
                 // If the same user with name exists in DB then raise an error
-                var exists = dbContext.Users.Any(u => u.Name == createUserRequest.Name);
+                var exists = dbContext.Users.Any(u => u.UserName == createUserRequest.UserName);
                 if (exists)
                 {
-                    throw new DuplicateUserException("A user with the same name already exists.");
+                    throw new DuplicateUserException("A user with the same user name already exists.");
                 }
                 if (!Enum.TryParse<UserRole>(createUserRequest.Role, ignoreCase: true, out UserRole role))
                 {
@@ -43,6 +43,7 @@ namespace UserService.Application.Services.CreateUser
                     Role = role,
                     UserName = createUserRequest.UserName,
                     CreatedBy = createUserRequest.CreatedBy,
+                    UpdatedBy = createUserRequest.CreatedBy,
                     CreatedDate = DateTime.UtcNow,
                     UpdatedDate = DateTime.UtcNow
                 };

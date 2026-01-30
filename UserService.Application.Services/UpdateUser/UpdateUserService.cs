@@ -24,10 +24,13 @@ namespace UserService.Application.Services.UpdateUser
                 var user = await dbContext.Users.FirstOrDefaultAsync(u => u.Id == updateUserRequest.Id) ?? throw new UserNotFoundException();
                 
                 // If the same user with name exists in DB then raise an error
-                var exists = dbContext.Users.Any(u => u.Name == updateUserRequest.Name);
+                var exists = dbContext.Users.Any(u => 
+                        u.Id != updateUserRequest.Id && 
+                        u.UserName == updateUserRequest.UserName);
+
                 if (exists)
                 {
-                    throw new DuplicateUserException("A user with the same name already exists.");
+                    throw new DuplicateUserException("A user with the same user name already exists.");
                 }
 
                 if (!Enum.TryParse<UserRole>(updateUserRequest.Role, ignoreCase: true, out UserRole role))

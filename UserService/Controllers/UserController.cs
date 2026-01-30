@@ -37,10 +37,15 @@ namespace UserService.WebApi.Controllers
                 logger.LogError($"Bad request while trying to fetch the user details: {ex.Message}");
                 return BadRequest("The request is not valid");
             }
+            catch (UserNotFoundException)
+            {
+                logger.LogInformation("User {UserId} not found", userId);
+                return NotFound();
+            }
             catch (Exception ex)
             {
                 logger.LogError(ex, "Unhandled exception occurred");
-                return StatusCode(500,"There is some error processing your request. Please contact the IT support team");
+                return StatusCode(500, "There is some error processing your request. Please contact the IT support team");
             }
         }
 
@@ -103,6 +108,11 @@ namespace UserService.WebApi.Controllers
             {
                 logger.LogError(ex, "Bad request while trying to fetch the user details");
                 return BadRequest(ex.Message ?? "The request is not valid");
+            }
+            catch (UserNotFoundException)
+            {
+                logger.LogInformation("User {UserId} not found", updateUserRequest.Id);
+                return NotFound();
             }
             catch (Exception ex)
             {
