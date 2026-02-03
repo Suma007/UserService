@@ -70,19 +70,19 @@ This keeps features isolated, easy to test, and easier to change independently.
 ### Create User
 
 ```
-POST /api/v1/users
+POST /api/v1/User
 ```
 
 ### Get User by Id
 
 ```
-GET /api/v1/users/{userId}
+GET /api/v1/User/{userId}
 ```
 
 ### Update User
 
 ```
-PUT /api/v1/users
+PUT /api/v1/User
 ```
 
 ---
